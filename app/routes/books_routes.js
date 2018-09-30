@@ -88,6 +88,27 @@ module.exports = function (app, db) {
             }
         });
     });
+    app.post('/v1/public/books/:bookId/comments', (req, res) => {
+        const bookId = req.params.bookId;
+        const newComment = req.body.comment;
+        const bookDetails = { '_id': new ObjectID(bookId) };
+
+        db.collection('books').findOne(bookDetails, (err, item) => {
+            if (err) {
+                res.send({ 'error': 'An error has occurred' });
+            } else {
+                item.comments.push(newComment);
+
+                db.collection('books').update(bookDetails, item, (err, item) => {
+                    if (err) {
+                        res.send({ 'error': 'An error has occurred' });
+                    } else {
+                        res.send(item);
+                    }
+                });
+            }
+        });
+    });
 
     //----------DELETE-------------------------//
     app.delete('/v1/public/books/:bookId', (req, res) => {

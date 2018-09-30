@@ -2,8 +2,8 @@ const ObjectID = require('mongodb').ObjectID;
 
 module.exports = function (app, db) {
     //----------GET----------------------------//
-    app.get('/v1/public/authors', (req, res) => {
-        db.collection('authors')
+    app.get('/v1/public/publishers', (req, res) => {
+        db.collection('publishers')
             .find()
             .toArray((err, items) => {
                 if (err) {
@@ -13,10 +13,10 @@ module.exports = function (app, db) {
                 }
             });
     });
-    app.get('/v1/public/authors/:authorId', (req, res) => {
-        const id = req.params.authorId;
+    app.get('/v1/public/publishers/:publisherId', (req, res) => {
+        const id = req.params.publisherId;
         const details = { '_id': new ObjectID(id) };
-        db.collection('authors').findOne(details, (err, item) => {
+        db.collection('publishers').findOne(details, (err, item) => {
             if (err) {
                 res.send({ 'error': 'An error has occurred' });
             } else {
@@ -24,10 +24,10 @@ module.exports = function (app, db) {
             }
         });
     });
-    app.get('/v1/public/authors/:authorId/books', (req, res) => {
-        const id = req.params.authorId;
+    app.get('/v1/public/publishers/:publisherId/books', (req, res) => {
+        const id = req.params.publisherId;
         const details = { '_id': new ObjectID(id) };
-        db.collection('authors')
+        db.collection('publishers')
             .aggregate(
                 [
                     {
@@ -35,7 +35,7 @@ module.exports = function (app, db) {
                         {
                             "from": "books",
                             "localField": "_id",
-                            "foreignField": "authors",
+                            "foreignField": "publishers",
                             "as": "books"
                         }
                     }
@@ -51,11 +51,11 @@ module.exports = function (app, db) {
     });
 
     //----------PUT----------------------------//
-    app.put('/v1/public/authors/:authorId', (req, res) => {
-        const id = req.params.authorId;
+    app.put('/v1/public/publishers/:publisherId', (req, res) => {
+        const id = req.params.publisherId;
         const details = { '_id': new ObjectID(id) };
-        const author = req.body.author;
-        db.collection('authors').update(details, author, (err, item) => {
+        const publisher = req.body.publisher;
+        db.collection('publishers').update(details, publisher, (err, item) => {
             if (err) {
                 res.send({ 'error': 'An error has occurred' });
             } else {
@@ -65,10 +65,10 @@ module.exports = function (app, db) {
     });
 
     //----------POST---------------------------//
-    app.post('/v1/public/authors', (req, res) => {
-        const newAuthor = req.body.author;
+    app.post('/v1/public/publishers', (req, res) => {
+        const newPublisher = req.body.publisher;
 
-        db.collection('authors').insert(newAuthor, (err, result) => {
+        db.collection('publishers').insert(newPublisher, (err, result) => {
             if (err) {
                 res.send({ 'error': 'An error has occurred' });
             } else {
@@ -78,14 +78,14 @@ module.exports = function (app, db) {
     });
 
     //----------DELETE-------------------------//
-    app.delete('/v1/public/authors/:authorId', (req, res) => {
-        const id = req.params.authorId;
+    app.delete('/v1/public/publishers/:publisherId', (req, res) => {
+        const id = req.params.publisherId;
         const details = { '_id': new ObjectID(id) };
-        db.collection('authors').remove(details, (err, item) => {
+        db.collection('publishers').remove(details, (err, item) => {
             if (err) {
                 res.send({ 'error': 'An error has occurred' });
             } else {
-                res.send('Author ' + id + ' deleted!');
+                res.send('Publisher ' + id + ' deleted!');
             }
         });
     });
