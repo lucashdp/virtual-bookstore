@@ -15,7 +15,7 @@ Your connection string is: <code>mongodb://iplaycore:t0k3n@iplaycore-shard-00-00
 ##### GET REGION
 - **[<code>GET</code> v1/public/books](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS.md)**
 - **[<code>GET</code> v1/public/books/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS_BY_ID.md)**
-- **[<code>GET</code> v1/public/books/:bookId/comments](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_COMMENTS.md)**
+- **[<code>GET</code> v1/public/books/:bookId/comments](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS_COMMENTS.md)**
 
 ##### PUT REGION
 - **[<code>PUT</code> v1/public/books/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/PUT_BOOKS.md)**
@@ -43,7 +43,7 @@ Your connection string is: <code>mongodb://iplaycore:t0k3n@iplaycore-shard-00-00
 - **[<code>POST</code> v1/public/authors](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/authors/POST_AUTHORS.md)**
 
 ##### DELETE REGION
-- **[<code>DELETE</code> v1/public/authors/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/authors/DELETE_AUTHORS.md)**
+- **[<code>DELETE</code> v1/public/authors/:authorId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/authors/DELETE_AUTHORS.md)**
 
 #### Publishers Resources
 

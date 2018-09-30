@@ -7,7 +7,7 @@ Returns the author of reference id.
 
 ## Parameters
 
-- **authorId** _(required)_ — number
+- **authorId** _(required)_ — string
 
 ***
 

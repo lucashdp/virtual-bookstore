@@ -7,7 +7,7 @@ Edit and return the author of reference id.
 
 ## Parameters
 
-- **authorId** _(required)_ — number
+- **authorId** _(required)_ — string
 - **author** _(required)_ — object
     - **name** _(required)_ — string
     - **Others params...** _(optional)_

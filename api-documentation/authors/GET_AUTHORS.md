@@ -3,7 +3,7 @@
     GET v1/public/authors
 
 ## Description
-Returns a listing of authors.
+Returns a list of authors.
 
 
 ## Example

@@ -1,9 +1,9 @@
 # Books Resources
 
-    GET v1/public/books/:bookId
+    DELETE v1/public/books/:bookId
 
 ## Description
-Returns the book of reference id.
+Delete the book of reference id.
 
 ## Parameters
 
@@ -17,10 +17,5 @@ Returns the book of reference id.
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books/5bb0e04a7ca1951a9cb23d50
 
 **Return**
-``` json
-{
-    "_id": ObjectId("5bb0e04a7ca1951a9cb23d50"),
-    "name": "Construindo APIs REST com Node.js: Caio Ribeiro Pereira",
-    "...": ""
-}
-```
+
+"Book id 5bb0e04a7ca1951a9cb23d50 deleted !"
