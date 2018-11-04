@@ -7,11 +7,11 @@ Returns a list of favorites books.
 
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/favorites
 
-**Return**
+**Request Response**
 ``` json
 [
     {

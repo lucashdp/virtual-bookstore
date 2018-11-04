@@ -5,7 +5,7 @@
 ## Description
 Create and return the new favorite book. You can post a book by title or by ISBN. User id is required.
 
-## Parameters
+## Request Body
 
 - **favorite** _(required)_ — object
     - **title** _(optional)_ — string
@@ -15,11 +15,11 @@ Create and return the new favorite book. You can post a book by title or by ISBN
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/favorites
 
-**Return**
+**Request Response**
 ``` json
 {
     "_id": ObjectId("5bb0e04a7ca1951a9cb23d50"),

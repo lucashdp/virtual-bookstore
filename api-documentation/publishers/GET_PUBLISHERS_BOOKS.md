@@ -5,18 +5,18 @@
 ## Description
 Returns the books of the publisher of reference id.
 
-## Parameters
+## Request Parameters
 
 - **publisherId** _(required)_ — string
 
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/publishers/5bb0e04a7ca1951a/books
 
-**Return**
+**Request Response**
 ``` json
 [
     {

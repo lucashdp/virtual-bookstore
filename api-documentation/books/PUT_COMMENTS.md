@@ -5,25 +5,28 @@
 ## Description
 Edit and return a comment of a book.
 
-## Parameters
+## Request Parameters
 
 - **bookId** _(required)_ — string
 - **commentId** _(required)_ — string
+
+## Request Body
+
 - **comment** _(required)_ — object
     - **userId** _(required)_ — string
     - **bookId** _(required)_ — string
     - **description** _(required)_ — string,
-    - **Others params...** _(optional)_
+    - **Others attributes...** _(optional)_
 
 
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books/5bb0e04a7ca1951a9cb23d49/comment/5bb0e04acb23d50
 
-**Return**
+**Request Response**
 ``` json
 {
     "_id": ObjectId("5bb0e04a7ca1951a9cb23d50"),

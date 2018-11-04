@@ -5,17 +5,17 @@
 ## Description
 Delete the book of reference id.
 
-## Parameters
+## Request Parameters
 
 - **bookId** _(required)_ — string
 
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books/5bb0e04a7ca1951a9cb23d50
 
-**Return**
+**Request Response**
 
 "Book id 5bb0e04a7ca1951a9cb23d50 deleted !"

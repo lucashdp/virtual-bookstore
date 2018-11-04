@@ -6,11 +6,11 @@
 Returns a list of orders.
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/orders
 
-**Return**
+**Request Response**
 ``` json
 [
     {

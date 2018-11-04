@@ -7,11 +7,11 @@ Returns a list of authors.
 
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/authors
 
-**Return**
+**Request Response**
 ``` json
 [
     {

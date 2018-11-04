@@ -5,7 +5,7 @@
 ## Description
 Create and return the new book.
 
-## Parameters
+## Request Body
 
 - **book** _(required)_ — object
     - **name** _(required)_ — string
@@ -17,11 +17,11 @@ Create and return the new book.
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books
 
-**Return**
+**Request Response**
 ``` json
 {
     "_id": ObjectId("5bb0e04a7ca1951a9cb23d50"),

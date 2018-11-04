@@ -7,11 +7,11 @@ Returns a list of publishers.
 
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/publishers
 
-**Return**
+**Request Response**
 ``` json
 [
     {

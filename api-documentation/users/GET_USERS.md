@@ -7,11 +7,11 @@ Returns a list of users.
 
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/users
 
-**Return**
+**Request Response**
 ``` json
 [
     {

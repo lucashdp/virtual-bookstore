@@ -6,11 +6,11 @@
 Returns a list of books.
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books
 
-**Return**
+**Request Response**
 ``` json
 [
     {

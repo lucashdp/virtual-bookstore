@@ -5,7 +5,11 @@
 ## Description
 Create and return the new score of a book.
 
-## Parameters
+## Request Parameters
+
+- **bookId** _(required)_ — string
+
+## Request Body
 
 - **score** _(required)_ — object
     - **userId** _(required)_ — string
@@ -15,11 +19,11 @@ Create and return the new score of a book.
 ***
 
 ## Example
-**Request**
+**Request URI**
 
     https://virtual-bookstore-lucashdp.herokuapp.com/v1/public/books/5bb0e04a7ca1951a9cb23d49/scores
 
-**Return**
+**Request Response**
 ``` json
 {
     "_id": ObjectId("5bb0e04a7ca18"),
