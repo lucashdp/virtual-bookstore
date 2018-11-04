@@ -1,5 +1,5 @@
 # virtual-bookstore
-Virtual Bookstore is a microservice for a bookstore including CRUDs for: books, comments of books, authors, publishers, orders and users. The reason for this API is a postgraduate work in Software Architecture at PUC MINAS, in the field of Backend Architecture and Microservices.
+Virtual Bookstore is a microservice for a bookstore including CRUDs for: books, comments of books, scores of books, favorites books, authors, publishers, orders and users. The reason for this API is a postgraduate work in Software Architecture at PUC MINAS, in the field of Backend Architecture and Microservices.
 
 ## Deploy
 **[This API was deployed at https://virtual-bookstore-lucashdp.herokuapp.com](https://virtual-bookstore-lucashdp.herokuapp.com)**
@@ -16,14 +16,17 @@ Your connection string is: <code>mongodb://iplaycore:t0k3n@iplaycore-shard-00-00
 - **[<code>GET</code> v1/public/books](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS.md)**
 - **[<code>GET</code> v1/public/books/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS_BY_ID.md)**
 - **[<code>GET</code> v1/public/books/:bookId/comments](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS_COMMENTS.md)**
+- **[<code>GET</code> v1/public/books/:bookId/scores](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/GET_BOOKS_SCORES.md)**
 
 ##### PUT REGION
 - **[<code>PUT</code> v1/public/books/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/PUT_BOOKS.md)**
 - **[<code>PUT</code> v1/public/books/:bookId/comments/:commentId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/PUT_COMMENTS.md)**
+- **[<code>PUT</code> v1/public/books/:bookId/scores/:scoreId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/PUT_SCORES.md)**
 
 ##### POST REGION
 - **[<code>POST</code> v1/public/books](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/POST_BOOKS.md)**
 - **[<code>POST</code> v1/public/books/:bookId/comments](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/POST_COMMENTS.md)**
+- **[<code>POST</code> v1/public/books/:bookId/scores](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/POST_SCORES.md)**
 
 ##### DELETE REGION
 - **[<code>DELETE</code> v1/public/books/:bookId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/books/DELETE_BOOKS.md)**
