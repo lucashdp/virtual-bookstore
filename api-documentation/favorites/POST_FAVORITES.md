@@ -9,7 +9,7 @@ Create and return the new favorite book. You can post a book by title or by ISBN
 
 - **favorite** _(required)_ — object
     - **title** _(optional)_ — string
-    - **ISBN** _(optional)_ — string
+    - **isbn** _(optional)_ — string
     - **userId** _(required)_ — string
 
 ***

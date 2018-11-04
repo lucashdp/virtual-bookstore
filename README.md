@@ -93,6 +93,18 @@ Your connection string is: <code>mongodb://iplaycore:t0k3n@iplaycore-shard-00-00
 - **[<code>DELETE</code> v1/public/users/:userId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/users/DELETE_USERS.md)**
 
 
+#### Favorites Resources
+
+##### GET REGION
+- **[<code>GET</code> v1/public/favorites](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/favorites/GET_FAVORITES.md)**
+- **[<code>GET</code> v1/public/favorites/:favoriteId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/favorites/GET_FAVORITES_BY_ID.md)**
+##### POST REGION
+- **[<code>POST</code> v1/public/favorites](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/favorites/POST_FAVORITES.md)**
+
+##### DELETE REGION
+- **[<code>DELETE</code> v1/public/favorites/:favoriteId](https://github.com/lucashdp/virtual-bookstore/blob/master/api-documentation/favorites/DELETE_FAVORITES.md)**
+
+
 ## Pre-Requisites
 
 - NodeJS is a pre requisite. You will use the Node Package Manager (npm).
