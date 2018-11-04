@@ -11,6 +11,7 @@ Create and return the new book.
     - **name** _(required)_ — string
     - **authorId** _(required)_ — string
     - **publisherId** _(required)_ — string
+    - **isbn** _(required)_ — string
     - **Others params...** _(optional)_
 
 ***
@@ -27,6 +28,7 @@ Create and return the new book.
     "name": "Aplicações web real-time com Node.js",
     "authorId": "5465564546",
     "publisherId": "984615",
+    "isbn": "6588880000",
     "...": ""
 }
 ```

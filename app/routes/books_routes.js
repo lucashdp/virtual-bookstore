@@ -35,6 +35,17 @@ module.exports = function (app, db) {
             }
         });
     });
+    app.get('/v1/public/books/:bookId/scores', (req, res) => {
+        const id = req.params.bookId;
+        const details = { '_id': new ObjectID(id) };
+        db.collection('books').findOne(details, (err, item) => {
+            if (err) {
+                res.send({ 'error': 'An error has occurred' });
+            } else {
+                res.send(item.scores);
+            }
+        });
+    });
 
     //----------PUT----------------------------//
     app.put('/v1/public/books/:bookId', (req, res) => {
@@ -49,6 +60,7 @@ module.exports = function (app, db) {
             }
         });
     });
+
     app.put('/v1/public/books/:bookId/comments/:commentId', (req, res) => {
         const bookId = req.params.bookId;
         const commentId = req.params.commentId;
@@ -63,6 +75,33 @@ module.exports = function (app, db) {
                 item.comments.map((comment) => {
                     if (comment._id == commentObjectId)
                         comment = commentEdited;
+                });
+
+                db.collection('books').update(bookDetails, item, (err, item) => {
+                    if (err) {
+                        res.send({ 'error': 'An error has occurred' });
+                    } else {
+                        res.send(item);
+                    }
+                });
+            }
+        });
+    });
+
+    app.put('/v1/public/books/:bookId/scores/:scoreId', (req, res) => {
+        const bookId = req.params.bookId;
+        const scoreId = req.params.scoreId;
+        const scoreEdited = req.params.scores;
+        const bookDetails = { '_id': new ObjectID(bookId) };
+        const scoresObjectId = new ObjectID(scoreId);
+
+        db.collection('books').findOne(bookDetails, (err, item) => {
+            if (err) {
+                res.send({ 'error': 'An error has occurred' });
+            } else {
+                item.scores.map((score) => {
+                    if (score._id == scoresObjectId)
+                        score = scoreEdited;
                 });
 
                 db.collection('books').update(bookDetails, item, (err, item) => {
@@ -109,7 +148,27 @@ module.exports = function (app, db) {
             }
         });
     });
+    app.post('/v1/public/books/:bookId/scores', (req, res) => {
+        const scoreId = req.params.scoreId;
+        const newScore = req.body.score;
+        const scoreDetails = { '_id': new ObjectID(scoreId) };
 
+        db.collection('books').findOne(scoreDetails, (err, item) => {
+            if (err) {
+                res.send({ 'error': 'An error has occurred' });
+            } else {
+                item.scores.push(newScore);
+
+                db.collection('books').update(scoreDetails, item, (err, item) => {
+                    if (err) {
+                        res.send({ 'error': 'An error has occurred' });
+                    } else {
+                        res.send(item);
+                    }
+                });
+            }
+        });
+    });
     //----------DELETE-------------------------//
     app.delete('/v1/public/books/:bookId', (req, res) => {
         const id = req.params.bookId;
