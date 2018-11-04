@@ -12,6 +12,7 @@ Create and return the new book.
     - **authorId** _(required)_ — string
     - **publisherId** _(required)_ — string
     - **isbn** _(required)_ — string
+    - **price** _(required)_ — number
     - **Others params...** _(optional)_
 
 ***
@@ -29,6 +30,7 @@ Create and return the new book.
     "authorId": "5465564546",
     "publisherId": "984615",
     "isbn": "6588880000",
+    "price": 100.00,
     "...": ""
 }
 ```

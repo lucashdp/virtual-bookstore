@@ -16,6 +16,7 @@ Edit and return a book.
     - **authorId** _(required)_ — string
     - **publisherId** _(required)_ — string
     - **isbn** _(required)_ — string
+    - **price** _(required)_ — number
     - **Others attributes...** _(optional)_
 
 ***
@@ -33,6 +34,7 @@ Edit and return a book.
     "authorId": "5465564546",
     "publisherId": "984615",
     "isbn": "6588880000",
+    "price": 100.00,
     "...": ""
 }
 ```
