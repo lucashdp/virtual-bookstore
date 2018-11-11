@@ -1,4 +1,5 @@
 const ObjectID = require('mongodb').ObjectID;
+const DataEnrichmentService = require('../data-enrichment-Service');
 
 module.exports = function (app, db) {
     //----------GET----------------------------//
@@ -9,7 +10,7 @@ module.exports = function (app, db) {
                 if (err) {
                     res.send({ 'error': 'An error has occurred' });
                 } else {
-                    res.send(items);
+                    DataEnrichmentService(items, res);
                 }
             });
     });
