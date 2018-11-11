@@ -1,5 +1,5 @@
 const ObjectID = require('mongodb').ObjectID;
-const DataEnrichmentService = require('../data-enrichment-Service/index.js');
+const DataEnrichmentService = require('../data-enrichment-service');
 
 module.exports = function (app, db) {
     //----------GET----------------------------//
