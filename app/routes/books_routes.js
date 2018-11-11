@@ -10,7 +10,7 @@ module.exports = function (app, db) {
                 if (err) {
                     res.send({ 'error': 'An error has occurred' });
                 } else {
-                    DataEnrichmentService(items, res);
+                    DataEnrichmentService.GetAll(items, res);
                 }
             });
     });
@@ -21,7 +21,10 @@ module.exports = function (app, db) {
             if (err) {
                 res.send({ 'error': 'An error has occurred' });
             } else {
-                res.send(item);
+                if (!item)
+                    DataEnrichmentService.Get(res, id);
+                else
+                    res.send(item);
             }
         });
     });
