@@ -22,7 +22,7 @@ function Get(res, id) {
     if (!id)
         id = 0;
 
-    request('https://bookstore-data-enrichment.herokuapp.com/v1/public/book/' + id,
+    request('https://bookstore-data-enrichment.herokuapp.com/v1/public/books/' + id,
         function (error, response) {
             if (error)
                 res.send(error)
