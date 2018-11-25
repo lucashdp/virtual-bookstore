@@ -29,9 +29,10 @@ module.exports = function (app, db) {
 
     //----------POST---------------------------//
     app.post('/v1/public/favorites', (req, res) => {
-        const newFavorite = req.body.favorite;
+        let newFavorite = req.body.favorite;
 
-        newFavorite.bookId = getBookId(newFavorite);
+        if (!newFavorite.bookId)
+            newFavorite.bookId = getBookId(newFavorite);
 
         if (newFavorite.bookId == 0)
             res.send({ 'error': 'No book found !' });
@@ -45,7 +46,7 @@ module.exports = function (app, db) {
             });
     });
 
-    function getBookId() {
+    function getBookId(newFavorite) {
         const queryTitle = { 'title': newFavorite.title };
         db.collection('books').findOne(queryTitle, (err, item) => {
             if (!item)
